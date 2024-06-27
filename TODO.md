@@ -44,3 +44,4 @@
 ## for better UI
 
 - [ ] make my logo
+- [ ] landing page animation
