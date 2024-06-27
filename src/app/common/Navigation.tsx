@@ -1,4 +1,5 @@
 "use client";
+
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -6,14 +7,19 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { useEffect, useState } from "react";
 
 export default function Navigation() {
-  const getTabIsOpen = (tab: string) => {
-    const currentTab = typeof window !== "undefined" ? window.location.pathname.split("/")[1] : "";
-    return currentTab === tab;
-  };
+  const [activeTab, setActiveTab] = useState("");
 
-  const isAboutTabOpen = getTabIsOpen("about");
+  useEffect(() => {
+    const currentTab = window.location.pathname.split("/")[1];
+    setActiveTab(currentTab);
+  }, []);
+
+  const getTabState = (tab: "about" | "articles" | "projects") =>
+    activeTab === tab ? "open" : "closed";
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -21,18 +27,26 @@ export default function Navigation() {
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
             href="/about"
-            active={isAboutTabOpen}
+            data-state={getTabState("about")}
           >
             About
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/articles">
+          <NavigationMenuLink
+            className={navigationMenuTriggerStyle()}
+            href="/articles"
+            data-state={getTabState("articles")}
+          >
             Articles
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/projects">
+          <NavigationMenuLink
+            className={navigationMenuTriggerStyle()}
+            href="/projects"
+            data-state={getTabState("projects")}
+          >
             Projects
           </NavigationMenuLink>
         </NavigationMenuItem>
