@@ -43,7 +43,7 @@
 
 - [ ] use skeleton
 - [ ] animate
-- [ ] dark mode
+- [x] dark mode
 
 ## for better UI
 
