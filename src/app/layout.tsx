@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google"
+import { Inter as FontSans } from "next/font/google";
 
 import "./globals.css";
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
+import Header from "./common/Header";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-})
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,10 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}>{children}</body>
+      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+        <div className={"flex h-screen flex-col"}>
+          <Header />
+          <main className="flex-1 p-4">{children}</main>
+          {/* <Footer /> */}
+        </div>
+      </body>
     </html>
   );
 }
