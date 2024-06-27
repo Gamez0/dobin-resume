@@ -1,6 +1,6 @@
 ## test shadcn
 
-- [ ] navigation-menu
+- [x] navigation-menu
 - [ ] card
 - [ ] carousel
 - [ ] badge
@@ -8,11 +8,13 @@
 
 ## common
 
-- [ ] create navigation menu that can route to pages
+- [x] create navigation menu that can route to pages
+  - [ ] selected style
+  - [ ] hover style
 
 ## about page
 
-- [ ] create page
+- [x] create page
 - [ ] create information section
 - [ ] create content section
 - [ ] create skill set component
@@ -22,15 +24,16 @@
 
 ## articles page
 
-- [ ] create page
+- [x] create page
 
 ## projects page
 
-- [ ] create page
+- [x] create page
 
 ## contact page
 
-- [ ] create page
+- [x] create page
+  - [x] connect to email sending
 
 ## footer
 
