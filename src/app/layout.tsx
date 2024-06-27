@@ -4,6 +4,7 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "./common/Header";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -23,11 +24,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
-        <div className={"flex h-screen flex-col"}>
-          <Header />
-          <main className="flex-1 p-4">{children}</main>
-          {/* <Footer /> */}
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className={"flex h-screen flex-col"}>
+            <Header />
+            <main className="flex-1 p-4">{children}</main>
+            {/* <Footer /> */}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
