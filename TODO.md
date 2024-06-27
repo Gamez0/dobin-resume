@@ -9,8 +9,11 @@
 ## common
 
 - [x] create navigation menu that can route to pages
-  - [ ] selected style
-  - [ ] hover style
+  - [x] selected style
+  - [x] hover style
+  - [ ] selected style customize
+  - [ ] hover style customize
+- [x] github link button
 
 ## about page
 

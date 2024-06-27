@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button";
 import Navigation from "../Navigation";
-import { Github, Sun } from "lucide-react";
+import GithubButton from "./GithubButton";
 import { ModeToggle } from "./ModeToggle";
 
 export default function Header() {
@@ -14,9 +13,7 @@ export default function Header() {
       </div>
 
       <div className="flex items-center gap-4">
-        <Button variant="outline" size="icon">
-          <Github />
-        </Button>
+        <GithubButton />
         <ModeToggle />
       </div>
     </header>
