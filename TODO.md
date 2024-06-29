@@ -4,16 +4,24 @@
 - [ ] card
 - [ ] carousel
 - [ ] badge
-- [ ] button
+- [x] button
+- [ ] skeleton
+- [x] green theme
+- [ ] table
 
 ## common
 
-- [x] create navigation menu that can route to pages
+- [ ] navigation menu
+  - [x] route to pages
   - [x] selected style
   - [x] hover style
   - [ ] selected style customize
   - [ ] hover style customize
-- [x] github link button
+- [ ] header
+  - [ ] logo
+    - [ ] on click go to home
+  - [x] theme button
+  - [x] github link button
 
 ## about page
 
@@ -37,6 +45,11 @@
 
 - [x] create page
   - [x] connect to email sending
+
+## landing(home) page
+
+- [x] create page
+- [ ] think idea 
 
 ## footer
 
