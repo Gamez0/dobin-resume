@@ -72,4 +72,4 @@
 ## for mobile
 
 - [ ] responsive design
-  - [ ] set break point
+  - [x] set break point
