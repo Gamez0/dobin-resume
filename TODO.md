@@ -74,3 +74,5 @@
 
 - [ ] responsive design
   - [x] set break point
+
+## deploy
