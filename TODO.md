@@ -36,6 +36,7 @@
   - [x] icon theme support
   - [ ] style section
   - [ ] responsive design
+  - [ ] hover animation
 
 ## articles page
 
