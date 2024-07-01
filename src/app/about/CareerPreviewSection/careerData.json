@@ -1,0 +1,17 @@
+[
+  {
+    "companyName": "Pozalabs Inc.",
+    "companyUrl": "https://pozalabs.com",
+    "termOfEmployment": "Since August 2022",
+    "jobTitle": "Front-end Developer",
+    "defaultLogoImageSrc": "/pozalabs_logo.png"
+  },
+  {
+    "companyName": "Tmax A&C Inc.",
+    "companyUrl": "https://www.tmax.co.kr/",
+    "termOfEmployment": "Jan 2021 - August 2022",
+    "jobTitle": "Front-end R&D Engineer",
+    "defaultLogoImageSrc": "/tmax_logo_dark.webp",
+    "lightModeLogoImageSrc": "/tmax_logo_light.webp"
+  }
+]
