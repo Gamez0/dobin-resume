@@ -77,3 +77,8 @@
   - [x] set break point
 
 ## deploy
+
+## operation
+
+- [ ] mixpanel
+- [ ] sentry
