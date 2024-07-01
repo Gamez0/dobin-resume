@@ -33,6 +33,7 @@
 - [ ] create preview contribution section
 - [ ] create preview company section
   - [x] create preview company card component
+  - [x] icon theme support
   - [ ] style section
   - [ ] responsive design
 
