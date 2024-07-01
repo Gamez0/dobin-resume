@@ -1,7 +1,7 @@
 ## test shadcn
 
 - [x] navigation-menu
-- [ ] card
+- [x] card
 - [ ] carousel
 - [ ] badge
 - [x] button
@@ -49,7 +49,7 @@
 ## landing(home) page
 
 - [x] create page
-- [ ] think idea 
+- [ ] think idea
 
 ## footer
 
