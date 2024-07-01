@@ -29,9 +29,12 @@
 - [ ] create information section
 - [ ] create content section
 - [ ] create skill set component
-- [ ] create preview article component
-- [ ] create preview contribution component
-- [ ] create preview company component
+- [ ] create preview article section
+- [ ] create preview contribution section
+- [ ] create preview company section
+  - [x] create preview company card component
+  - [ ] style section
+  - [ ] responsive design
 
 ## articles page
 
@@ -65,3 +68,8 @@
 
 - [ ] make my logo
 - [ ] landing page animation
+
+## for mobile
+
+- [ ] responsive design
+  - [ ] set break point
