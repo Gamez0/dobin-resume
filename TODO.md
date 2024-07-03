@@ -35,7 +35,7 @@
   - [x] create preview company card component
   - [x] icon theme support
   - [ ] style section
-  - [ ] responsive design
+  - [x] responsive design
   - [ ] hover animation
 
 ## articles page
