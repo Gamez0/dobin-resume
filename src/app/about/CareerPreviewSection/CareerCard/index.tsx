@@ -38,7 +38,8 @@ export default function CareerCard({
   const logoSrc = getLogoSrc();
 
   return (
-    <Card className="w-[500px]">
+    // want to center the Card component when the parent is grid
+    <Card className="w-full max-w-[500px] content-center items-center justify-center odd:place-self-end even:place-self-start lg:max-w-none">
       <a href={companyUrl} target="_blank">
         <CardHeader>
           <CardDescription className="leading-[36px]">{termOfEmployment}</CardDescription>
