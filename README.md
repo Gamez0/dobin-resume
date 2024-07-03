@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c2f215b5b6b74315b06da5f3c3670ad2)](https://app.codacy.com/gh/Gamez0/dobin-resume?utm_source=github.com&utm_medium=referral&utm_content=Gamez0/dobin-resume&utm_campaign=Badge_Grade)
+
 First, run the development server:
 
 ```bash
