@@ -1,6 +1,3 @@
-import Header from "./common/Header";
-import Navigation from "./common/Navigation";
-
 export default function Home() {
   // TODO: landing page
   return (
