@@ -1,5 +1,5 @@
 "use client";
-import { useTheme } from "next-themes";
+
 import CareerCard from "./CareerCard";
 import type { CareerCardProps } from "./CareerCard/types";
 import careerData from "./careerData.json";
