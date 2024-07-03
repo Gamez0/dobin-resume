@@ -76,6 +76,17 @@
 - [ ] responsive design
   - [x] set break point
 
+## test
+
+- [x] install jest
+- [ ] write test code
+
+## CI
+
+- [ ] test using jest
+- [ ] codacy
+  - [x] badge on README.md
+
 ## deploy
 
 ## operation
