@@ -60,13 +60,18 @@
 
 - [ ] create footer
 
-## for better UX
+## for better UI/UX
+
+### common
+- [ ] animate
+  - [ ] install framer-motion
+
+### UX
 
 - [ ] use skeleton
-- [ ] animate
 - [x] dark mode
 
-## for better UI
+### UI
 
 - [ ] make my logo
 - [ ] landing page animation
