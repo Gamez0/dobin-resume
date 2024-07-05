@@ -6,7 +6,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? "/dobin-resume" : "",
+  // basePath: isProd ? "/dobin-resume" : "",
   assetPrefix: isProd ? "/dobin-resume/" : "",
   // trailingSlash: true,
   // async rewrites() {
