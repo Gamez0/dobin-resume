@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/dobin-resume",
-  assetPrefix: "/dobin-resume/",
+  basePath: "/",
+  assetPrefix: "/",
   trailingSlash: true,
 
   async rewrites() {
