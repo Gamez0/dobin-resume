@@ -1,14 +1,13 @@
 /** @type {import('next').NextConfig} */
-const isDev = process.env.NODE_ENV === "development";
-console.log("🚀 ~ isDev:", isDev);
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   output: "export",
   images: {
     unoptimized: true,
   },
-  basePath: isDev ? "" : "/dobin-resume",
-  assetPrefix: isDev ? "" : "/dobin-resume/",
+  basePath: "/dobin-resume",
+  assetPrefix: "/dobin-resume/",
   // trailingSlash: true,
   // async rewrites() {
   //   return [
