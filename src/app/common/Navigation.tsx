@@ -25,25 +25,31 @@ export default function Navigation() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuLink data-state={getTabState("about")}>
-            <Link className={navigationMenuTriggerStyle()} href={"/about"}>
-              About
-            </Link>
-          </NavigationMenuLink>
+          <Link
+            className={navigationMenuTriggerStyle()}
+            href={"/about"}
+            data-state={getTabState("about")}
+          >
+            About
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink data-state={getTabState("articles")}>
-            <Link className={navigationMenuTriggerStyle()} href={"/articles"}>
-              Articles
-            </Link>
-          </NavigationMenuLink>
+          <Link
+            className={navigationMenuTriggerStyle()}
+            href={"/articles"}
+            data-state={getTabState("articles")}
+          >
+            Articles
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink data-state={getTabState("projects")}>
-            <Link className={navigationMenuTriggerStyle()} href={"/projects"}>
-              Projects
-            </Link>
-          </NavigationMenuLink>
+          <Link
+            className={navigationMenuTriggerStyle()}
+            href={"/projects"}
+            data-state={getTabState("projects")}
+          >
+            Projects
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink
