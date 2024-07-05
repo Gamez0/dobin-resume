@@ -1,6 +1,10 @@
-import Navigation from "../Navigation";
+"use client";
+
 import GithubButton from "./GithubButton";
 import { ModeToggle } from "./ModeToggle";
+import dynamic from "next/dynamic";
+
+const Navigation = dynamic(() => import("../Navigation"));
 
 export default function Header() {
   return (

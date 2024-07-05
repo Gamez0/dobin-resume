@@ -7,6 +7,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Navigation() {
@@ -24,30 +25,24 @@ export default function Navigation() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuLink
-            className={navigationMenuTriggerStyle()}
-            href="/about"
-            data-state={getTabState("about")}
-          >
-            About
+          <NavigationMenuLink data-state={getTabState("about")}>
+            <Link className={navigationMenuTriggerStyle()} href={"/about"}>
+              About
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink
-            className={navigationMenuTriggerStyle()}
-            href="/articles"
-            data-state={getTabState("articles")}
-          >
-            Articles
+          <NavigationMenuLink data-state={getTabState("articles")}>
+            <Link className={navigationMenuTriggerStyle()} href={"/articles"}>
+              Articles
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink
-            className={navigationMenuTriggerStyle()}
-            href="/projects"
-            data-state={getTabState("projects")}
-          >
-            Projects
+          <NavigationMenuLink data-state={getTabState("projects")}>
+            <Link className={navigationMenuTriggerStyle()} href={"/projects"}>
+              Projects
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
