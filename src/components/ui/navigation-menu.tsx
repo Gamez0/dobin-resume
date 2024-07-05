@@ -74,11 +74,11 @@ NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName;
 const NavigationMenuLink = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Link>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Link>
->(({ href, ...props }, ref) => (
+>(({ ...props }, ref) => (
   <NavigationMenuPrimitive.Link
     ref={ref}
     {...props}
-    href={process.env.NODE_ENV === "production" ? "/dobin-resume" + href : href}
+    // href={process.env.NODE_ENV === "production" ? "/dobin-resume" + href : href}
   />
 ));
 
