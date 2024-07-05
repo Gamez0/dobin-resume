@@ -8,7 +8,7 @@ const nextConfig = {
   assetPrefix: "/dobin-resume/",
   trailingSlash: true,
 
-  rewrites() {
+  async rewrites() {
     return [
       {
         source: "/:path*",
