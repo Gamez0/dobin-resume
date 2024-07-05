@@ -13,9 +13,6 @@ export default function CareerPreviewSection() {
         {CAREER_DATA.map((career, index) => (
           <CareerCard key={index} {...career} />
         ))}
-        {CAREER_DATA.map((career, index) => (
-          <CareerCard key={index} {...career} />
-        ))}
       </div>
     </section>
   );
