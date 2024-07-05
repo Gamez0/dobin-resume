@@ -11,6 +11,7 @@ import {
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import type { CareerCardProps } from "./types";
+import { motion } from "framer-motion";
 
 export default function CareerCard({
   companyUrl,
@@ -38,8 +39,13 @@ export default function CareerCard({
   const logoSrc = getLogoSrc();
 
   return (
-    <Card className="w-[500px]">
-      <a href={companyUrl} target="_blank">
+    <motion.a
+      className="w-full max-w-[500px] content-center items-center justify-center odd:place-self-end even:place-self-start lg:max-w-none"
+      whileHover={{ scale: 1.05 }}
+      href={companyUrl}
+      target="_blank"
+    >
+      <Card>
         <CardHeader>
           <CardDescription className="leading-[36px]">{termOfEmployment}</CardDescription>
           <CardTitle className="leading-[36px]">{jobTitle}</CardTitle>
@@ -50,7 +56,7 @@ export default function CareerCard({
         <CardFooter className="h-[90px]">
           <Image src={logoSrc} width={60} height={60} alt="company logo" />
         </CardFooter>
-      </a>
-    </Card>
+      </Card>
+    </motion.a>
   );
 }

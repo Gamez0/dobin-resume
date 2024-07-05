@@ -13,5 +13,12 @@
     "jobTitle": "Front-end R&D Engineer",
     "defaultLogoImageSrc": "/tmax_logo_dark.webp",
     "lightModeLogoImageSrc": "/tmax_logo_light.webp"
+  },
+  {
+    "companyName": "Inha University",
+    "companyUrl": "https://www.inha.ac.kr/",
+    "termOfEmployment": "Mar 2014 - Aug 2020",
+    "jobTitle": "Bachelor's degree, Computer Science",
+    "defaultLogoImageSrc": "/inha_logo.png"
   }
 ]

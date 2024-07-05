@@ -34,9 +34,10 @@
 - [ ] create preview company section
   - [x] create preview company card component
   - [x] icon theme support
-  - [ ] style section
-  - [ ] responsive design
-  - [ ] hover animation
+  - [x] style section
+  - [x] responsive design
+  - [x] hover animation
+  - [ ] data
 
 ## articles page
 
@@ -63,8 +64,13 @@
 ## for better UI/UX
 
 ### common
+
 - [ ] animate
-  - [ ] install framer-motion
+  - [x] install framer-motion
+  - [ ] add variants
+    - [ ] slide
+    - [ ] opacity
+    - [ ] blink
 
 ### UX
 
