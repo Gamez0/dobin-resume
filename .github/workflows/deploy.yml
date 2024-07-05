@@ -25,7 +25,7 @@ jobs:
       - name: Install and Build
         run: |
           yarn install
-          yarn build
+          NODE_ENV=production yarn build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

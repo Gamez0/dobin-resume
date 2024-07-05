@@ -2,6 +2,7 @@
   "name": "dobin-resume",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Gamez0.github.io/dobin-resume",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
