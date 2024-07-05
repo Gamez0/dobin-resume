@@ -78,7 +78,7 @@ const NavigationMenuLink = React.forwardRef<
   <NavigationMenuPrimitive.Link
     ref={ref}
     {...props}
-    href={process.env.NODE_ENV === "production" ? "dobin-resume/" + href : href}
+    href={process.env.NODE_ENV === "production" ? "/dobin-resume" + href : href}
   />
 ));
 
