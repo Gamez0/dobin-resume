@@ -99,7 +99,9 @@
   - [x] badge on README.md
 - [ ] build test in pr
 
-## deploy
+## CD
+
+- [ ] deploy.dml
 
 ## operation
 
