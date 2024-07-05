@@ -6,7 +6,7 @@ const nextConfig = {
   },
   basePath: "/dobin-resume",
   assetPrefix: "/dobin-resume/",
-  // trailingSlash: true,
+  trailingSlash: true,
 
   rewrites() {
     return [
