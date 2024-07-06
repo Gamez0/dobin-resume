@@ -81,6 +81,8 @@
 
 - [ ] make my logo
 - [ ] landing page animation
+  - [ ] idea
+    - [ ] her trees game
 
 ## for mobile
 
