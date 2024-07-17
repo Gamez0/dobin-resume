@@ -106,7 +106,8 @@
 - [ ] deploy.dml
 
 ## git
-- [ ] pr draft
+
+- [x] pr draft
 
 ## operation
 
