@@ -105,6 +105,9 @@
 
 - [ ] deploy.dml
 
+## git
+- [ ] pr draft
+
 ## operation
 
 - [ ] mixpanel
