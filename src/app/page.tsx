@@ -60,7 +60,7 @@ function DragTest() {
 
       <motion.div className="relative size-full rounded-[30px]" ref={constraintsRef}>
         <motion.div
-          className="flex size-[300px] flex-col items-center justify-center gap-4 rounded-full border bg-[#C2C1C2]/10"
+          className="flex size-[300px] cursor-pointer flex-col items-center justify-center gap-4 rounded-full border bg-[#C2C1C2]/10"
           drag
           dragConstraints={constraintsRef}
           initial={{ x: 150, rotate: 0 }}
@@ -69,10 +69,23 @@ function DragTest() {
           <div className="top-[150px] size-[5px] rounded-full border border-[#181718]" />
           <span className="text-[#E0E1E0]">inspired by her tree</span>
         </motion.div>
-        <motion.div className="size-[120px] ?" initial={{ rotate: 0 }} animate={{ rotate: 30 }}>
+        <motion.div className="size-[120px]" initial={{ rotate: 0 }} animate={{ rotate: 30 }}>
           <Image src={"/turntable_arm.svg"} width={120} height={120} alt="arm" />
         </motion.div>
       </motion.div>
     </div>
   );
 }
+
+// function IdeaTest(){
+//   return (
+
+//   )
+// }
+
+// idea
+// lp 판을 특정 위치에 두면, lp판이 아니라 gpu 같은 칩이면 어떨까?
+// 어디서 일했는지
+// 그리고 아래 기술스택들이 활성화 효과를 주면 어떨까?
+// 아이디어 from workos.com , cpu 칩 같은게 okta azure google 이런 거 위에 있음
+// .circuit-looping-highlight--top in workos.com
