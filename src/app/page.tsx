@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 
 import Image from "next/image";
+import Circuit from "./home/Circuit";
 
 export default function Home() {
   // TODO: landing page
@@ -17,7 +18,8 @@ export default function Home() {
 function LandingSection() {
   return (
     <section className="flex size-full flex-col items-center justify-between p-24">
-      <DragTest />
+      {/* <DragTest /> */}
+      <Circuit />
     </section>
   );
 }
@@ -76,12 +78,6 @@ function DragTest() {
     </div>
   );
 }
-
-// function IdeaTest(){
-//   return (
-
-//   )
-// }
 
 // idea
 // lp 판을 특정 위치에 두면, lp판이 아니라 gpu 같은 칩이면 어떨까?
