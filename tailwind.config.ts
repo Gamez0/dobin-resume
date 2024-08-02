@@ -77,10 +77,30 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "circuit-top": {
+          "0%": { top: "-100%", opacity: "0" },
+          "50%": { top: "0%", opacity: "1" },
+          "100%": { top: "-10%", opacity: "0" },
+        },
+        slideDown: {
+          // Keyframes for slide-down effect
+          "0%": {
+            transform:
+              "translate3d(0px, -100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+            opacity: "0",
+          },
+          "100%": {
+            transform:
+              "translate3d(0px, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "circuit-top": "circuit-top 6s cubic-bezier(0.31, -0.01, 0.55, 0.99) infinite",
+        "slide-down": "slideDown 1s cubic-bezier(0.31, -0.01, 0.55, 0.99) forwards",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function Circuit() {
   return (
     <div className="mx-auto w-full max-w-[1200px]" aria-labelledby="container">
@@ -32,20 +33,12 @@ export default function Circuit() {
             className="absolute left-[406px] top-[66px] z-[3] h-[260px] w-[270px] overflow-hidden"
           >
             <div
-              style={{
-                transform:
-                  "translate3d(0px, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                transformStyle: "preserve-3d",
-              }}
               aria-labelledby="circuit-top-highlight-line"
-              className="size-full bg-gradient-to-b from-[rgba(35,240,195,0)] via-[rgba(35,240,195,0.23)] to-[#23f0c3]"
+              className="size-full animate-slide-down bg-gradient-to-b from-[rgba(35,240,195,0)] via-[rgba(35,240,195,0.23)] to-[#23f0c3]"
             ></div>
-            {/* 여기까지 했음 */}
           </div>
-          <div
-            className="circuit-looping-highlight circuit-looping-highlight--top"
-            style={{ display: "block" }}
-          ></div>
+          <div className="absolute top-[-10%] z-[2] size-full animate-circuit-top bg-gradient-to-b from-transparent to-[#23f0c3] font-sans text-[16px] font-normal leading-[1.2] text-white" />
+          {/* 여기까지 했음 */}
           <div className="circuit-top-bg"></div>
           <div
             className="circuit-chip-highlight cc-top"
