@@ -80,7 +80,7 @@ const config = {
         "circuit-top": {
           "0%": { top: "-100%", opacity: "0" },
           "50%": { top: "0%", opacity: "1" },
-          "100%": { top: "-10%", opacity: "0" },
+          "100%": { top: "100%", opacity: "0" },
         },
         slideDown: {
           // Keyframes for slide-down effect

@@ -1,5 +1,34 @@
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
 /* eslint-disable @next/next/no-img-element */
 export default function Circuit() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // useEffect(() => {
+  //   const handlePageLoad = () => {
+  //     // Delay the animation start by 3 seconds after the page is fully loaded
+  //     // setTimeout(() => {
+  //     setIsLoaded(true);
+  //     // }, 3000);
+  //   };
+
+  //   // Check if the page is already loaded (for fast connections)
+  //   if (document.readyState === "complete") {
+  //     handlePageLoad();
+  //   } else {
+  //     // Otherwise, wait for the load event
+  //     window.addEventListener("load", handlePageLoad);
+  //   }
+
+  //   // Clean up the event listener on component unmount
+  //   return () => window.removeEventListener("load", handlePageLoad);
+  // }, []);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
   return (
     <div className="mx-auto w-full max-w-[1200px]" aria-labelledby="container">
       <div
@@ -10,9 +39,8 @@ export default function Circuit() {
           className="relative mb-[-176px] flex items-center justify-center overflow-hidden"
           aria-labelledby="circuit-top"
         >
-          <img
-            src="https://cdn.prod.website-files.com/621f54116cab10f6e9215d8b/62723a9e2f75a49275ec2c97_circuit-top.png"
-            loading="lazy"
+          <Image
+            src="/circuit_top.png"
             height={477}
             width={859}
             alt=""
@@ -20,8 +48,7 @@ export default function Circuit() {
             className="relative z-[4] h-auto w-full max-w-[859px]"
           />
           <img
-            src="https://cdn.prod.website-files.com/621f54116cab10f6e9215d8b/6231f2bb5204dfd7354a4b57_circuit-top-looping-lines.png"
-            loading="lazy"
+            src="/circuit_top_looping_lines.png"
             sizes="(max-width: 767px) 100vw, (max-width: 991px) 89vw, 859px"
             srcSet="https://cdn.prod.website-files.com/621f54116cab10f6e9215d8b/6231f2bb5204dfd7354a4b57_circuit-top-looping-lines-p-500.png 500w, https://cdn.prod.website-files.com/621f54116cab10f6e9215d8b/6231f2bb5204dfd7354a4b57_circuit-top-looping-lines-p-800.png 800w, https://cdn.prod.website-files.com/621f54116cab10f6e9215d8b/6231f2bb5204dfd7354a4b57_circuit-top-looping-lines-p-1080.png 1080w, https://cdn.prod.website-files.com/621f54116cab10f6e9215d8b/6231f2bb5204dfd7354a4b57_circuit-top-looping-lines-p-1600.png 1600w, https://cdn.prod.website-files.com/621f54116cab10f6e9215d8b/6231f2bb5204dfd7354a4b57_circuit-top-looping-lines.png 1718w"
             alt=""
@@ -32,12 +59,25 @@ export default function Circuit() {
             aria-labelledby="circuit-top-highlight-lines-wrap"
             className="absolute left-[406px] top-[66px] z-[3] h-[260px] w-[270px] overflow-hidden"
           >
-            <div
-              aria-labelledby="circuit-top-highlight-line"
-              className="size-full animate-slide-down bg-gradient-to-b from-[rgba(35,240,195,0)] via-[rgba(35,240,195,0.23)] to-[#23f0c3]"
-            ></div>
+            {/* 네모 모양의 색을 가진 div가 내려가서 회로 전체에 불을 켜주는 애니메이션 */}
+            {isLoaded && (
+              <div
+                aria-labelledby="circuit-top-highlight-line"
+                className={cn(
+                  "size-full top-[-10%] opacity-0 bg-gradient-to-b from-[rgba(35,240,195,0)] via-[rgba(35,240,195,0.23)] to-[#23f0c3] animate-slide-down",
+                  { "": isLoaded },
+                )}
+              ></div>
+            )}
           </div>
-          <div className="absolute top-[-10%] z-[2] size-full animate-circuit-top bg-gradient-to-b from-transparent to-[#23f0c3] font-sans text-[16px] font-normal leading-[1.2] text-white" />
+          {/* 네모 모양의 색을 가진 div가 내려가서 회로 선에만 불을 켜주는 애니메이션 */}
+          {isLoaded && (
+            <div
+              className={cn(
+                "absolute z-[2] h-1/3 w-full bg-gradient-to-b from-transparent to-[#23f0c3] font-sans text-[16px] font-normal leading-[1.2] text-white animate-circuit-top",
+              )}
+            />
+          )}
           {/* 여기까지 했음 */}
           <div className="circuit-top-bg"></div>
           <div
