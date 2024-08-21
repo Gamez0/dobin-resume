@@ -79,8 +79,8 @@ const config = {
         },
         "circuit-top": {
           "0%": { top: "-100%", opacity: "0" },
-          "50%": { top: "0%", opacity: "1" },
-          "100%": { top: "100%", opacity: "0" },
+          // "50%": { top: "0%", opacity: "1" },
+          "100%": { top: "100%", opacity: "1" },
         },
         slideDown: {
           // Keyframes for slide-down effect
@@ -100,6 +100,7 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "circuit-top": "circuit-top 6s cubic-bezier(0.31, -0.01, 0.55, 0.99) infinite",
+        "circuit-bottom": "circuit-top 6s cubic-bezier(0.31, -0.01, 0.55, 0.99) infinite delay-1s",
         "slide-down": "slideDown 1s cubic-bezier(0.31, -0.01, 0.55, 0.99) forwards",
       },
       fontFamily: {
