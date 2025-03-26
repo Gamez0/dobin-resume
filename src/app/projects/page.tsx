@@ -1,3 +1,5 @@
+"use client";
+
 import ProjectExperience from "@/model/project-experience";
 import { useState } from "react";
 
