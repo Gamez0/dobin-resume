@@ -7,13 +7,13 @@ export default function Page() {
   const [projects, setProjects] = useState<ProjectExperience[]>([]);
 
   useEffect(() => {
-    const fetchUserData = async () => {
+    const fetchProjects = async () => {
       const response = await fetch("/api/projects"); // 절대 경로로 수정
       const data = await response.json();
       setProjects(data);
     };
 
-    fetchUserData();
+    fetchProjects();
   }, []);
 
   return (
