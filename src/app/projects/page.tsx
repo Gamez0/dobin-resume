@@ -12,7 +12,6 @@ export default function Page() {
       const data = await response.json();
       setProjects(data);
     };
-    console.log("herer");
 
     fetchUserData();
   }, []);
