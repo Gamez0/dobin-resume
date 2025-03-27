@@ -5,7 +5,6 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "./common/Header";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
-import MockProvider from "@/mocks/MockProvider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -31,7 +30,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {process.env.NODE_ENV === "development" && <MockProvider />}
           <div className={"flex h-screen flex-col"}>
             <Header />
             <main className="flex-1">{children}</main>
