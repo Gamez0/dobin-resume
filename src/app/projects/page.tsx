@@ -20,16 +20,20 @@ export default async function Page() {
   return (
     <div>
       <h1>Page of Projects</h1>
-      {projects.map((project) => (
-        <div key={project.name}>
-          <h2>{project.name}</h2>
-          <p>{project.description}</p>
-          <p>
-            {project.startDate} - {project.endDate}
-          </p>
-          <p>Technologies: {project.technologies.join(", ")}</p>
-        </div>
-      ))}
+      {projects.length > 0 ? (
+        projects.map((project) => (
+          <div key={project.name}>
+            <h2>{project.name}</h2>
+            <p>{project.description}</p>
+            <p>
+              {project.startDate} - {project.endDate}
+            </p>
+            <p>Technologies: {project.technologies.join(", ")}</p>
+          </div>
+        ))
+      ) : (
+        <p>No projects found.</p>
+      )}
       {/* Add your project components or content here */}
     </div>
   );
