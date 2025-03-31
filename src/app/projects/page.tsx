@@ -1,6 +1,6 @@
 import ProjectExperience from "@/model/project-experience";
 
-const fetchProjects = async (): Promise<ProjectExperience[]> => {
+const fetchProjects = async (): Promise<ProjectExperience[] | { error: string }> => {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/projects`);
     if (!response.ok) {
@@ -9,11 +9,15 @@ const fetchProjects = async (): Promise<ProjectExperience[]> => {
     return await response.json();
   } catch (error) {
     console.error("Failed to fetch projects:", error);
-    return [];
+    return { error: "Failed to fetch projects" };
   }
 };
 export default async function Page() {
   const projects = await fetchProjects();
+
+  if ("error" in projects) {
+    return <div>Failed to fetch projects: {projects.error}</div>;
+  }
 
   return (
     <div>
