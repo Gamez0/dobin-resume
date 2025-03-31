@@ -1,22 +1,20 @@
 import ProjectExperience from "@/model/project-experience";
 
-const fetchProjects = async (): Promise<ProjectExperience[] | { error: string }> => {
-  try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/projects`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return await response.json();
-  } catch (error) {
-    console.error("Failed to fetch projects:", error);
-    return { error: "Failed to fetch projects" };
+const fetchProjects = async (): Promise<ProjectExperience[]> => {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/projects`);
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
   }
+  return await response.json();
 };
 export default async function Page() {
-  const projects = await fetchProjects();
+  let projects: ProjectExperience[] = [];
 
-  if ("error" in projects) {
-    return <div>Failed to fetch projects: {projects.error}</div>;
+  try {
+    projects = await fetchProjects();
+  } catch (error) {
+    console.error("Error fetching projects", error);
+    return <div>Error: Failed fetching projects</div>;
   }
 
   return (
