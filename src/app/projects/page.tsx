@@ -1,7 +1,7 @@
 import ProjectExperience from "@/model/project-experience";
 
 const fetchProjects = async (): Promise<ProjectExperience[]> => {
-  const response = await fetch("http://localhost:3000/api/projects");
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/projects`);
   return response.json();
 };
 export default async function Page() {
