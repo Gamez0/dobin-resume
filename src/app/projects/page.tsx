@@ -1,36 +1,25 @@
-"use client";
-
 import ProjectExperience from "@/model/project-experience";
-import { useEffect, useState } from "react";
 
-export default function Page() {
-  const [projects, setProjects] = useState<ProjectExperience[]>([]);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const response = await fetch("/api/projects"); // 절대 경로로 수정
-      const data = await response.json();
-      setProjects(data);
-    };
-
-    fetchProjects();
-  }, []);
+const fetchProjects = async (): Promise<ProjectExperience[]> => {
+  const response = await fetch("http://localhost:3000/api/projects");
+  return response.json();
+};
+export default async function Page() {
+  const projects = await fetchProjects();
 
   return (
     <div>
       <h1>Page of Projects</h1>
-      {projects.length > 0
-        ? projects.map((project) => (
-            <div key={project.name}>
-              <h2>{project.name}</h2>
-              <p>{project.description}</p>
-              <p>
-                {project.startDate} - {project.endDate}
-              </p>
-              <p>Technologies: {project.technologies.join(", ")}</p>
-            </div>
-          ))
-        : "Loading..."}
+      {projects.map((project) => (
+        <div key={project.name}>
+          <h2>{project.name}</h2>
+          <p>{project.description}</p>
+          <p>
+            {project.startDate} - {project.endDate}
+          </p>
+          <p>Technologies: {project.technologies.join(", ")}</p>
+        </div>
+      ))}
       {/* Add your project components or content here */}
     </div>
   );
