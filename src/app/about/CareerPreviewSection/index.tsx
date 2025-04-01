@@ -7,13 +7,13 @@ import careerData from "@assets/careerData.json";
 const CAREER_DATA = careerData as CareerCardProps[];
 
 export default function CareerPreviewSection() {
-  return (
-    <section className="w-full bg-secondary px-4 py-16">
-      <div className="inline-grid w-full grid-flow-row grid-cols-2  gap-8 px-[80px] lg:grid-cols-1 lg:px-0">
-        {CAREER_DATA.map((career, index) => (
-          <CareerCard key={index} {...career} />
-        ))}
-      </div>
-    </section>
-  );
+    return (
+        <section className="w-full bg-secondary px-4 py-16">
+            <div className="inline-grid w-full grid-flow-row grid-cols-2  gap-8 px-[80px] lg:grid-cols-1 lg:px-0">
+                {CAREER_DATA.map((career, index) => (
+                    <CareerCard key={index} {...career} />
+                ))}
+            </div>
+        </section>
+    );
 }
